@@ -1,0 +1,51 @@
+Layout/LineLength:
+  Max: 100
+  # To make it possible to copy or click on URIs in the code, we allow lines
+  # containing a URI to be longer than Max.
+  AllowURI: true
+  URISchemes:
+    - http
+    - https
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - spec/**/*
+
+Lint/ConstantDefinitionInBlock:
+  Exclude:
+    - 'spec/**/*'
+
+Lint/MissingSuper:
+  Exclude:
+    - spec/**/*
+
+Lint/UnreachableCode:
+  Exclude:
+    - 'spec/quick_service/service/service_spec.rb'
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 25
+  Exclude:
+    - 'quick_service.gemspec'
+    - spec/**/*
+
+Metrics/MethodLength:
+  CountComments: false
+  Max: 24
+
+Naming/PredicateName:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# `fail` and `fail!` are intentional DSL method names on Service, not the
+# Ruby `fail` keyword.
+Style/SignalException:
+  Exclude:
+    - 'lib/quick_service/service.rb'
+    - spec/**/*

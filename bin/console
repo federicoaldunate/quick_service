@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+require 'bundler/setup'
+require 'quick_service'
+
+# You can add fixtures and/or initialization code here to make experimenting
+# with the gem easier.
+
+require 'irb'
+IRB.start(__FILE__)
